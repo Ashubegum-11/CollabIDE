@@ -35,7 +35,10 @@ app.use(express.json());
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://collab-ide-nu.vercel.app", 
+    ],
     methods: ["GET", "POST"],
   },
 });
